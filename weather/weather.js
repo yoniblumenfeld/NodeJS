@@ -7,7 +7,7 @@ let getWeather = (lat,lng,cb) => {
     },(error,response,body)=>{
     if(error){
         cb('unable to connect to forecast.io servers');
-    }else if(respone.Statuscode === 400){
+    }else if(response.Statuscode === 400){
         cb('invalid location given!');
     }else if(String(body) === body){
         if(body.trim() === 'Forbidden'){

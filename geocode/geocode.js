@@ -10,6 +10,7 @@ let geocodeAddress = (address,callback) => {
         } else if(body.results[0].locations.length <= 0){
             callback('unable to find given address');
         } else {
+            
             callback(undefined,{
                 address: body.results[0].providedLocation.location,
                 latitude: body.results[0].locations[0].latLng.lat,
